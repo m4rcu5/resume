@@ -1,0 +1,69 @@
+/*
+ * This stylesheet is ment to be used in combination with
+ * the Buttondown stylesheep. See base.css
+ * /
+
+/* Company Logos */
+.logo {
+    float: right;
+    margin-right: 45px;
+    margin-bottom: 10px;
+}
+
+/* Mugshot top right */
+img#mugshot {
+    float: right;
+    border: 1px solid;
+    border-radius: 8%;
+    margin: 45px 25px;
+    box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* Default html markup */
+html {
+    background-color: gray;
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    width: 1000px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 5px 15px;
+}
+
+/* Format for different media */
+@media screen {
+    body {
+        border-radius: 0.45%;
+        border: 1px solid;
+    }
+}
+
+@media print {
+    table {
+        width: 650px;
+    }
+}
+
+/* Paragraph formatting */
+dt {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-right: 100px;
+}
+
+/* Adjust title size */
+h1 {
+    font-size: 3em;
+}
+
+/* Avoid pagebreaks on print */
+h1, h2, h3 {
+     page-break-after: avoid;
+}
+
+

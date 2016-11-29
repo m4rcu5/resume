@@ -1,0 +1,137 @@
+---
+Title:      Resume of Marcus van Dam  
+Author:     Marcus van Dam
+Date:       November 10, 2016  
+CSS:        css/base.css
+CSS:        css/custom.css
+CSS:        http://fonts.googleapis.com/css?family=Open+Sans
+CSS:        http://fonts.googleapis.com/css?family=PT+Sans
+---
+
+Marcus van Dam ![mugshot][]
+===========================
+
+|:-----------------------------|-----------------------------:|
+|Fahrenheitstraat 2            |   marcus (at) marcusvandam.nl|
+|2041 CH Zandvoort             |       GPG: 0xB44C673E920EE3A4|
+|Netherlands                   |                     [Keybase]|
+|+31 6 28 553 497              |                      [Github]|
+|[LinkedIn]                    |                   [BitBucket]|
+
+
+
+## Summary ##
+
++ DevOps engineer and system architect with experience in Unix, Linux, Windows and VMWare environments. Deployment and design on bare metal and cloud platforms.
++ Programming and maintenance experience in Perl (main language), Ruby (Chef), PHP, Python and Shell scripting.
++ Frontend work is not really one of my skills.
++ 10 years of experience in the field of hosting services.
++ Network operator of the AS9017 network.
++ Perfect is the enemy of good enough. That is a ongoing battle.
++ Turning hobbies into work. Combining experience with hosting, photo, video, audio and network if possible.
+
+
+## Experience ##
+
+**Ökotest Germany** ![oekotest][]
+:   *Graphical Design* (Internship) 2006
+
+    This internship was supposed to get my feet wet in graphics design and learn some more about frontend work. However it turned out, that my interest seemed to be more about figuring out how the systems are connected, the network arranged and the flow of project data between the different departments was set up.
+
+    **Keywords:** Adobe Indesign, Photoshop, Collor Correction, Font Design
+
+:   *System Administrator* (Internship) 2007
+
+    This second internship was now focused on the system administration in the office environment. Their environment was based on Windows XP desktops, Samba 3 domain, and Gentoo servers. Combined with specialty software for the image database and various Adobe packages.
+
+    **Keywords:** Samba, Windows Domains, Desktop Administration
+
+**Ground Control Show** 2008 ![gcs][]
+:   *Stage Technician*
+
+    Working in a small team, you are self sufficient and responsible for transport, setup and operation of all equipment that is needed at a particular show. The contracts varied from small garden events to Mystery Land and Rockit Open Air. Setups including Sound, Light and Rigging. The irregular working hours, troubleshooting on demand (with the tools and people at hand) and variety of venues still intrigue me today.
+
+    **Keywords:** Aviolite, Midas, DMX
+
+**LeaseWeb** ![leaseweb][]
+:   *Provisioning Engineer* (2009 to 2011)
+
+    As a provisioning engineer at LeaseWeb, your main focus is at the delivery of Bare Metal and Colocation services, as well as new datacenter POP deployments.
+
+    **Highlights:**
+
+    + Setup of colocation procedures. Including customer and internal communication protocols.
+
+    + Deployment of first US POP. Together with a small team we set up the first USA POP from the ground up in under a week.
+
+    **Keywords:** BareMetal, Colocation, Automatic provisioning, Datacenter Infrastructure, Network (layer 1)
+
+:   *Hosting Operations Engineer* (2011 to 2015)
+
+    As a Hosting Operations Engineer (formerly known as Technical Support) you are responsible for all customer facing hosting platforms (DNS, Email, Web) and its infrastructure. In this role my focus is at the design and security of the existing setups and new designs. In the last 6 months of this position LeaseWeb as an organization moved to an agile way of working. Merging the former Hosting Engineers with with the Software Developers, forming the Product Engineering team. Together you are operationally responsible for the applications and platforms in order to make sure that LeaseWeb’s products and services are available to our customers. Test, deploy, administer, monitor and maintain the infrastructure.
+
+    **Highlights:**
+
+    + Redesign and live-migration of the CL2000 webhosting platform. LeaseWeb's webhosting platform used to be based on stand-alone servers running the Plesk management panel. The new design allowed for on demand scaling in a clustered setup. Being build upon NFS storage, separate MySQL servers and Plesk interface machines. Using HAProxy as loadbalancers in HA setup.
+
+    + Chef
+    This has now become LeaseWeb's main configuration management system. I have started with the initial PoC of Chef within LeaseWeb's infrastructure and supported fellow engineers in the implementation of Chef in their infrastructure. This also paved the way for automated deployments of application code. 
+
+    + Remote Management
+    Together with a bare metal focused development team we designed and implemented a remote management platform for our dedicated servers. Using FreeBSD for VPN access and concentrator servers. Using the internal PF subsystem to grant and deny access on a per client basis.
+
+    + Monitoring
+    Designing, planning and rolling out a monitoring platform based on Opsview. This was a project growing over time, when the amount of point per server we continued to monitor increased. The fact that Nagios is largely Perl based, made development of custom plugins easy.
+
+    **Keywords:** HAProxy, Apache, NginX, FreeBSD, CARP, Debian, Ubuntu, Plesk, MySQL, MSSQL, Windows Server, JunOS, IOS, (Open)VPN, SSL, Network (layer 2-7).
+
+:   *Infrastructure Architect* (2016 to current)
+
+    The role of Infrastructure Architect is one with focus on technical expertise. Your responsibilities include defining the systems architecture vision, strategy and technical solutions for all product engineering teams and integrate with the development roadmap. Align all the teams on the existing architecture and defined the new standards. Focus on automation and scalability. Coordinate incidents across departments. Function as the last line escalation point for all teams and help train the engineers.
+
+    **Keywords:** Design, Scalability, Training, Operations
+
+**ZFM Zandvoort** ![zfmzandvoort][]
+:   *Chief Technical Officer* (2013 to current) (volunteering position)
+
+    A local radio station is a combination of mostly analog audio equipment and a digital backbone. Combining this with the transmission equipment, there is a broad spectrum of technologies to be maintained. We also develop custom hardware as needed. The network includes broadcasting systems, transmission monitoring, desktop environment and PBX systems.
+    Broadcasting is also performed in external locations, introducing p2p audio transmissions and mobile studios.
+
+    **Keywords:** Audio Processing, PBX, HAM, Transmission, Circuit Repair/Design
+
+
+## Education & Training##
+
++ **Highshool:** Havo N&T - Class of 2008 at 'Sancta Maria Lyceum Haarlem'
++ **Business English** Horizon Interlingua - 2011
++ **A10 Network Loadbalancing** Terach University - 2012
++ **Chef Intermediate Training** Chef - 2014
+
+
+## Skills ##
+
++ Languages: Perl (++++), Bash (+++), PHP (+++), C++ (+), Ruby (+++), HTML (++)
++ Operating Systems: Linux (Debian, Ubuntu, Centos, Gentoo), BSD (FreeBSD, OpenBSD), Firewalls (pfSense, OPNsense, Monowall), ESXi, Windows (Server >2000)
++ DevOps, Agile, SCRUM
++ Apache, Nginx, Tomcat, Lighttpd, MySQL/MariaDB, Dovecot, Postfix, Icecast
++ Nagios, Icinga, Opsview, Prometheus, Grafana, *TSDB
++ Git, SVN, Jira, Stash, Jenkins
+
+
+## Hobbies ##
++ **Photography:** Resident Photographer at Bevrijdingspop/Beeckesteinpop/Rob Acda Award ([Flickr Page])
++ **Radio:** As well as being the tech chief, my passion is recording live band performances in our studio. ([AlternativeFM])
+
+
+[mugshot]: images/mugshot.png "Marcus van Dam" width=150px height=175px
+[gcs]: images/gcs.png "Ground Control Show" class="logo" width=75px height=75px
+[oekotest]: images/oekotest.png "Oekotest" class="logo" width=125px height=75px
+[leaseweb]: images/leaseweb.png "LeaseWeb" class="logo" width=125px height=75px
+[zfmzandvoort]: images/zfm.png "ZFM Zandvoort" class="logo" width=150px height=75px
+
+[Keybase]:   https://keybase.io/marcusvandam
+[LinkedIn]:  https://nl.linkedin.com/in/marcusvandam
+[Github]:    https://github.com/m4rcu5
+[BitBucket]: https://bitbucket.org/m4rcu5_net
+[AlternativeFM]: http://www.altfm.nl
+[Flickr Page]:   https://flickr.com/people/marcusvadnam
