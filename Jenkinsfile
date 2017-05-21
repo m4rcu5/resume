@@ -25,7 +25,9 @@ node {
                 archiveArtifacts artifacts: '*.md, *.pdf, webcontent.tar.gz', fingerprint: true
             },
             "Deploy to webserver": {
-                sh "echo DEPLOYING...."
+                withCredentials([usernamePassword(credentialsId: 'ftp-resume.marcusvandam.nl', passwordVariable: 'FTP_PASSWORD', usernameVariable: 'FTP_USERNAME')]) {
+                    sh "lftp -u ${FTP_USERNAME},'${FTP_PASSWORD}' -e 'mirror -R css; mirror -R images; mirror -Rr -I *.html; quit' ftp://web01.ams-sbp1.bytesheep.net"
+                }
             }
         )
     }
