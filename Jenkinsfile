@@ -17,10 +17,17 @@ node {
         }
     }
 
-    stage("Archive build output") {
-        sh 'tar -czf webcontent.tar.gz css/ images/ *.html'
+    stage("Publish") {
+        parallel(
+            "Archive Artifacts": {
+                sh 'tar -czf webcontent.tar.gz css/ images/ *.html'
 
-        archiveArtifacts artifacts: '*.md, *.pdf, webcontent.tar.gz', fingerprint: true
+                archiveArtifacts artifacts: '*.md, *.pdf, webcontent.tar.gz', fingerprint: true
+            },
+            "Deploy to webserver": {
+                sh "echo DEPLOYING...."
+            }
+        )
     }
 
     stage("Cleanup") {
