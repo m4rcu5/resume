@@ -29,7 +29,7 @@ pdf: $(FILE).pdf
 	@echo "Building HTML finished."
 
 %.pdf: %.html
-	wkhtmltopdf -B 0 -L 0 -R 0 -T 0 page $< $@
+	wkhtmltopdf --print-media-type -B 0 -L 0 -R 0 -T 0 page $< $@
 	@echo
 	@echo "Building PDF finished."
 
