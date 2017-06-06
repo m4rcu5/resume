@@ -46,8 +46,8 @@ Marcus van Dam ![mugshot][]
 
     **Keywords:** Samba, Windows Domains, Desktop Administration
 
-**Ground Control Show** 2008 ![gcs][]
-:   *Stage Technician*
+**Ground Control Show** ![gcs][]
+:   *Stage Technician* 2008
 
     Working in a small team, you are self sufficient and responsible for transport, setup and operation of all equipment that is needed at a particular show. The contracts varied from small garden events to Mystery Land and Rockit Open Air. Setups including Sound, Light and Rigging. The irregular working hours, troubleshooting on demand (with the tools and people at hand) and variety of venues still intrigue me today.
 
@@ -123,11 +123,11 @@ Marcus van Dam ![mugshot][]
 + **Radio:** As well as being the tech chief, my passion is recording live band performances in our studio. ([AlternativeFM])
 
 
-[mugshot]: images/mugshot.png "Marcus van Dam" width=150px height=175px
-[gcs]: images/gcs.png "Ground Control Show" class="logo" width=75px height=75px
-[oekotest]: images/oekotest.png "Oekotest" class="logo" width=125px height=75px
-[leaseweb]: images/leaseweb.png "LeaseWeb" class="logo" width=125px height=75px
-[zfmzandvoort]: images/zfm.png "ZFM Zandvoort" class="logo" width=150px height=75px
+[mugshot]: images/mugshot.png "Marcus van Dam" height=175px
+[gcs]: images/gcs.png "Ground Control Show" class="logo" height=75px
+[oekotest]: images/oekotest.png "Oekotest" class="logo" height=75px
+[leaseweb]: images/leaseweb.png "LeaseWeb" class="logo" height=75px
+[zfmzandvoort]: images/zfm.png "ZFM Zandvoort" class="logo" height=75px
 
 [Keybase]:   https://keybase.io/marcusvandam
 [LinkedIn]:  https://nl.linkedin.com/in/marcusvandam
