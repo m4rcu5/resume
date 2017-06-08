@@ -23,14 +23,14 @@ node {
 
     stage("Publish Artifacts") {
         stage("Archive Artifacts") {
-            sh 'tar -czf webcontent.tar.gz css/ images/ *.html'
+            sh 'tar -czf webcontent.tar.gz build/*'
 
-            archiveArtifacts artifacts: '*.md, *.pdf, webcontent.tar.gz', fingerprint: true
+            archiveArtifacts artifacts: 'build/*.md, build/*.pdf, webcontent.tar.gz', fingerprint: true
         }
 
         stage("Deploy to webserver") {
             withCredentials([usernamePassword(credentialsId: 'ftp-resume.marcusvandam.nl', passwordVariable: 'FTP_PASSWORD', usernameVariable: 'FTP_USERNAME')]) {
-                sh "lftp -u ${FTP_USERNAME},'${FTP_PASSWORD}' -e 'mirror -R css; mirror -R images; mirror -Rr -I *.html; quit' ftp://web01.ams-sbp1.bytesheep.net"
+                sh "lftp -u ${FTP_USERNAME},'${FTP_PASSWORD}' -e 'mirror -R build/ /; quit' ftp://web01.ams-sbp1.bytesheep.net"
             }
         }
     }

@@ -5,6 +5,9 @@
 # Base filename
 FILE = Marcus_van_Dam
 
+# Build directory
+BUILDDIR = build
+
 # Targets
 .PHONY: help html pdf release
 
@@ -15,22 +18,25 @@ help:
 	@echo "  pdf        to make a standalone pdf file"
 	@echo
 	@echo "  watch      to continuesly update the html output"
-#	@echo "  release    to create a new release and upload it to github"
 
 #
 # File types to build
 #
-html: $(FILE).html
-pdf: $(FILE).pdf
+html: $(BUILDDIR)/$(FILE).html
+pdf: $(BUILDDIR)/$(FILE).pdf
 
-%.html: %.md
+$(BUILDDIR)/%.html: %.md
+	@mkdir -p $(@D)
 	multimarkdown $< > $@
-	@echo
 	@echo "Building HTML finished."
+	@cp -r css/ images/ --target-dir=$(@D)
+	@echo "Copied CSS and images."
+	@ln -s $(notdir $@) $(@D)/index.html
+	@echo "Linking index.html."
 
-%.pdf: %.html
+$(BUILDDIR)/%.pdf: $(BUILDDIR)/%.html
+	@mkdir -p $(@D)
 	wkhtmltopdf --print-media-type -B 0 -L 0 -R 0 -T 0 page $< $@
-	@echo
 	@echo "Building PDF finished."
 
 
