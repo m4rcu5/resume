@@ -134,4 +134,4 @@ Marcus van Dam ![mugshot][]
 [Github]:    https://github.com/m4rcu5
 [BitBucket]: https://bitbucket.org/m4rcu5_net
 [AlternativeFM]: http://www.altfm.nl
-[Flickr Page]:   https://flickr.com/people/marcusvadnam
+[Flickr Page]:   https://flickr.com/people/marcusvandam
