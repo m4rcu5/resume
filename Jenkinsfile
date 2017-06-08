@@ -23,6 +23,14 @@ node {
         }
     }
 
+    stage("Test HTML artifacts") {
+        container = docker.image('18fgsa/html-proofer')
+
+        container.inside {
+            sh "htmlproofer --check-html --http-status-ignore 999 build/"
+        }
+    }
+
     stage("Publish Artifacts") {
         stage("Archive Artifacts") {
             sh 'tar -czf webcontent.tar.gz build/*'
@@ -38,7 +46,7 @@ node {
     }
 
     stage('Build image') {
-        container = docker.build("marcusvandam/resume")
+        container = docker.build('marcusvandam/resume')
     }
 
     stage('Publish image') {
