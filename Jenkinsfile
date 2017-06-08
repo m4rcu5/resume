@@ -35,7 +35,7 @@ node {
         stage("Archive Artifacts") {
             sh 'tar -czf webcontent.tar.gz build/*'
 
-            archiveArtifacts artifacts: 'build/*.md, build/*.pdf, webcontent.tar.gz', fingerprint: true
+            archiveArtifacts artifacts: '*.md, build/*.pdf, webcontent.tar.gz', fingerprint: true
         }
 
         stage("Deploy to webserver") {
