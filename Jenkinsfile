@@ -3,6 +3,8 @@
 node {
     def container
 
+    deleteDir()
+
     stage('Clone repository') {
         checkout scm
     }
@@ -30,7 +32,7 @@ node {
 
         stage("Deploy to webserver") {
             withCredentials([usernamePassword(credentialsId: 'ftp-resume.marcusvandam.nl', passwordVariable: 'FTP_PASSWORD', usernameVariable: 'FTP_USERNAME')]) {
-                sh "lftp -u ${FTP_USERNAME},'${FTP_PASSWORD}' -e 'mirror -R build/ /; quit' ftp://web01.ams-sbp1.bytesheep.net"
+                sh "lftp -u ${FTP_USERNAME},'${FTP_PASSWORD}' -e 'mirror -RL build/ /; quit' ftp://web01.ams-sbp1.bytesheep.net"
             }
         }
     }
