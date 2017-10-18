@@ -33,38 +33,12 @@ Marcus van Dam ![mugshot][]
 
 ## Experience ##
 
-**Ökotest Germany** ![oekotest][]
-:   *Graphical Design* (Internship) 2006
-
-    This internship was supposed to get my feet wet in graphics design and learn some more about frontend work. However it turned out, that my interest seemed to be more about figuring out how the systems are connected, the network arranged and the flow of project data between the different departments was set up.
-
-    **Keywords:** Adobe Indesign, Photoshop, Collor Correction, Font Design
-
-:   *System Administrator* (Internship) 2007
-
-    This second internship was now focused on the system administration in the office environment. Their environment was based on Windows XP desktops, Samba 3 domain, and Gentoo servers. Combined with specialty software for the image database and various Adobe packages.
-
-    **Keywords:** Samba, Windows Domains, Desktop Administration
-
-**Ground Control Show** ![gcs][]
-:   *Stage Technician* 2008
-
-    Working in a small team, you are self sufficient and responsible for transport, setup and operation of all equipment that is needed at a particular show. The contracts varied from small garden events to Mystery Land and Rockit Open Air. Setups including Sound, Light and Rigging. The irregular working hours, troubleshooting on demand (with the tools and people at hand) and variety of venues still intrigue me today.
-
-    **Keywords:** Aviolite, Midas, DMX
-
 **LeaseWeb** ![leaseweb][]
-:   *Provisioning Engineer* (2009 to 2011)
+:   *Infrastructure Architect* (2016 to current)
 
-    As a provisioning engineer at LeaseWeb, your main focus is at the delivery of Bare Metal and Colocation services, as well as new datacenter POP deployments.
+    The role of Infrastructure Architect is one with focus on technical expertise. Your responsibilities include defining the systems architecture vision, strategy and technical solutions for all product engineering teams and integrate with the development roadmap. Align all the teams on the existing architecture and defined the new standards. Focus on automation and scalability. Coordinate incidents across departments. Function as the last line escalation point for all teams and help train the engineers.
 
-    **Highlights:**
-
-    + Setup of colocation procedures. Including customer and internal communication protocols.
-
-    + Deployment of first US POP. Together with a small team we set up the first USA POP from the ground up in under a week.
-
-    **Keywords:** BareMetal, Colocation, Automatic provisioning, Datacenter Infrastructure, Network (layer 1)
+    **Keywords:** Design, Scalability, Training, Operations
 
 :   *Hosting Operations Engineer* (2011 to 2015)
 
@@ -85,11 +59,17 @@ Marcus van Dam ![mugshot][]
 
     **Keywords:** HAProxy, Apache, NginX, FreeBSD, CARP, Debian, Ubuntu, Plesk, MySQL, MSSQL, Windows Server, JunOS, IOS, (Open)VPN, SSL, Network (layer 2-7).
 
-:   *Infrastructure Architect* (2016 to current)
+:   *Provisioning Engineer* (2009 to 2011)
 
-    The role of Infrastructure Architect is one with focus on technical expertise. Your responsibilities include defining the systems architecture vision, strategy and technical solutions for all product engineering teams and integrate with the development roadmap. Align all the teams on the existing architecture and defined the new standards. Focus on automation and scalability. Coordinate incidents across departments. Function as the last line escalation point for all teams and help train the engineers.
+    As a provisioning engineer at LeaseWeb, your main focus is at the delivery of Bare Metal and Colocation services, as well as new datacenter POP deployments.
 
-    **Keywords:** Design, Scalability, Training, Operations
+    **Highlights:**
+
+    + Setup of colocation procedures. Including customer and internal communication protocols.
+
+    + Deployment of first US POP. Together with a small team we set up the first USA POP from the ground up in under a week.
+
+    **Keywords:** BareMetal, Colocation, Automatic provisioning, Datacenter Infrastructure, Network (layer 1)
 
 **ZFM Zandvoort** ![zfmzandvoort][]
 :   *Chief Technical Officer* (2013 to current) (volunteering position)
@@ -99,13 +79,33 @@ Marcus van Dam ![mugshot][]
 
     **Keywords:** Audio Processing, PBX, HAM, Transmission, Circuit Repair/Design
 
+**Ground Control Show** ![gcs][]
+:   *Stage Technician* 2008
+
+    Working in a small team, you are self sufficient and responsible for transport, setup and operation of all equipment that is needed at a particular show. The contracts varied from small garden events to Mystery Land and Rockit Open Air. Setups including Sound, Light and Rigging. The irregular working hours, troubleshooting on demand (with the tools and people at hand) and variety of venues still intrigue me today.
+
+    **Keywords:** Aviolite, Midas, DMX
+
+**Ökotest Germany** ![oekotest][]
+:   *Graphical Design* (Internship) 2006
+
+    This internship was supposed to get my feet wet in graphics design and learn some more about frontend work. However it turned out, that my interest seemed to be more about figuring out how the systems are connected, the network arranged and the flow of project data between the different departments was set up.
+
+    **Keywords:** Adobe Indesign, Photoshop, Collor Correction, Font Design
+
+:   *System Administrator* (Internship) 2007
+
+    This second internship was now focused on the system administration in the office environment. Their environment was based on Windows XP desktops, Samba 3 domain, and Gentoo servers. Combined with specialty software for the image database and various Adobe packages.
+
+    **Keywords:** Samba, Windows Domains, Desktop Administration
+
 
 ## Education & Training##
 
-+ **Highshool:** Havo N&T - Class of 2008 at 'Sancta Maria Lyceum Haarlem'
-+ **Business English** Horizon Interlingua - 2011
-+ **A10 Network Loadbalancing** Terach University - 2012
 + **Chef Intermediate Training** Chef - 2014
++ **A10 Network Loadbalancing** Terach University - 2012
++ **Business English** Horizon Interlingua - 2011
++ **Highshool:** Havo N&T - Class of 2008 at 'Sancta Maria Lyceum Haarlem'
 
 
 ## Skills ##
@@ -119,6 +119,7 @@ Marcus van Dam ![mugshot][]
 
 
 ## Hobbies ##
+
 + **Photography:** Resident Photographer at Bevrijdingspop/Beeckesteinpop/Rob Acda Award ([Flickr Page])
 + **Radio:** As well as being the tech chief, my passion is recording live band performances in our studio. ([AlternativeFM])
 
