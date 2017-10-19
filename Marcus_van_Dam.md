@@ -71,6 +71,14 @@ Marcus van Dam ![mugshot][]
 
     **Keywords:** BareMetal, Colocation, Automatic provisioning, Datacenter Infrastructure, Network (layer 1)
 
+**ByteSheep Services**
+:   *Owner* (2015 to current)
+
+    ByteSheep Services is my own company. Started from the typical "can you host my website" friends and family service. My passion for radio quickly added streaming as a new service. With the trials of DAB+ broadcasting in the Netherlands I have teamed up with RF experts to form DAB Partners. Where I provide DAB+ supporting services such as streaming, trans-coding, multiplexing, content delivery and transmission line monitoring. As well as supporting on-site installation of the equipment, network and wireless transmission equipment.
+
+    **Keywords:** DAB+, Long Range WiFi, Icecast, Docker, Kubernetes, InfluxDB
+    
+
 **ZFM Zandvoort** ![zfmzandvoort][]
 :   *Chief Technical Officer* (2013 to current) (volunteering position)
 
@@ -122,6 +130,7 @@ Marcus van Dam ![mugshot][]
 
 + **Photography:** Resident Photographer at Bevrijdingspop/Beeckesteinpop/Rob Acda Award ([Flickr Page])
 + **Radio:** As well as being the tech chief, my passion is recording live band performances in our studio. ([AlternativeFM])
+
 
 ---
 
