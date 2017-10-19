@@ -1,7 +1,7 @@
 ---
 Title:      Resume of Marcus van Dam  
 Author:     Marcus van Dam
-Date:       November 10, 2016  
+Date:       October 19, 2017
 CSS:        css/base.css
 CSS:        css/custom.css
 CSS:        http://fonts.googleapis.com/css?family=Open+Sans
@@ -23,11 +23,12 @@ Marcus van Dam ![mugshot][]
 ## Summary ##
 
 + DevOps engineer and system architect with experience in Unix, Linux, Windows and VMWare environments. Deployment and design on bare metal and cloud platforms.
++ Problem seeker, loves finding a solution, but rather fixes the problem before it manifests itself.
 + Programming and maintenance experience in Perl (main language), Ruby (Chef), PHP, Python and Shell scripting.
-+ Frontend work is not really one of my skills.
++ Only limited frontend skill.
 + 10 years of experience in the field of hosting services.
 + Network operator of the AS9017 network.
-+ Perfect is the enemy of good enough. That is a ongoing battle.
++ If there is another way, would not accept the half, quick and dirty solution.
 + Turning hobbies into work. Combining experience with hosting, photo, video, audio and network if possible.
 
 
