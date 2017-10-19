@@ -123,6 +123,14 @@ Marcus van Dam ![mugshot][]
 + **Photography:** Resident Photographer at Bevrijdingspop/Beeckesteinpop/Rob Acda Award ([Flickr Page])
 + **Radio:** As well as being the tech chief, my passion is recording live band performances in our studio. ([AlternativeFM])
 
+---
+
+## About this resume ##
+
+This resume is written as a markdown document, version controlled, an the latest version maintained on my [Github] page. Upon change, the document is compiled together with the stylesheet to HTML, converted to PDF and uploaded to my online [resume page][Resume].
+The whole process is automated by use of a Jenkins file and run in Docker containers. A containerized version of this resume is also available.
+
+
 
 [mugshot]: images/mugshot.png "Marcus van Dam" height=175px
 [gcs]: images/gcs.png "Ground Control Show" class="logo" height=75px
@@ -134,5 +142,6 @@ Marcus van Dam ![mugshot][]
 [LinkedIn]:  https://nl.linkedin.com/in/marcusvandam
 [Github]:    https://github.com/m4rcu5
 [BitBucket]: https://bitbucket.org/m4rcu5_net
+[Resume]:    http://resume.marcusvandam.nl
 [AlternativeFM]: http://www.altfm.nl
 [Flickr Page]:   https://flickr.com/people/marcusvandam
