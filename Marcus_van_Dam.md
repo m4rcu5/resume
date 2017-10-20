@@ -75,10 +75,16 @@ Marcus van Dam ![mugshot][]
 **ByteSheep Services**
 :   *Owner* (2015 to current)
 
-    ByteSheep Services is my own company. Started from the typical "can you host my website" friends and family service. My passion for radio quickly added streaming as a new service. With the trials of DAB+ broadcasting in the Netherlands I have teamed up with RF experts to form DAB Partners. Where I provide DAB+ supporting services such as streaming, trans-coding, multiplexing, content delivery and transmission line monitoring. As well as supporting on-site installation of the equipment, network and wireless transmission equipment.
+    ByteSheep Services is my own company. Started from the typical "can you host my website" friends and family service. My passion for radio quickly added streaming as a new service. With the trials of DAB+ broadcasting in the Netherlands I have teamed up with RF experts to form [DAB Partners]. Where I provide DAB+ supporting services such as streaming, trans-coding, multiplexing, content delivery and transmission line monitoring. As well as supporting on-site installation of the equipment, network and wireless transmission equipment.
 
-    **Keywords:** DAB+, Long Range WiFi, Icecast, Docker, Kubernetes, InfluxDB
-    
+    **Keywords:** DAB+, Long Range WiFi, Icecast, Docker, Kubernetes, InfluxDB, LAMP, Mail
+
+**Timelapse.Live** ![timelapselive][]
+:   *Co-Owner* (2014 to current)
+
+    Branching off the photography hobby, together with a fellow photographer, who was already doing timelapses at Bevrijdingspop, we gave it a live twist. Our service provides a [high quality timelapse][TimelapseLive] with the latest live image and periodically generated video accessible per API. To provide this, we build custom hardware to control the DSLR coupled with an API to ingest and process the images. The delivery is done trough a scalable CDN.
+
+    **Keywords:** PHP, Python, Raspberry, Hardware, WiFi, CDN
 
 **ZFM Zandvoort** ![zfmzandvoort][]
 :   *Chief Technical Officer* (2013 to current) (volunteering position)
@@ -132,12 +138,22 @@ Marcus van Dam ![mugshot][]
 + **Photography:** Resident Photographer at Bevrijdingspop/Beeckesteinpop/Rob Acda Award ([Flickr Page])
 + **Radio:** As well as being the tech chief, my passion is recording live band performances in our studio. ([AlternativeFM])
 
+## Public References ##
+
+### Blog Posts ###
++ [A Brief Overview of the History of Linux Containers](http://www.techsummit.io/2017/09/04/history-of-linux-containers.html)
++ [Cloud Computing's History and Impact](http://www.techsummit.io/2017/08/14/cloud-computing-history.html)
+
+### Talks ###
++ [Chef at LeaseWeb: past, present and future](https://www.youtube.com/watch?v=Uwv9gLdjvo8)
+
+
 
 ---
 
 ## About this resume ##
 
-This resume is written as a markdown document, version controlled, an the latest version maintained on my [Github] page. Upon change, the document is compiled together with the stylesheet to HTML, converted to PDF and uploaded to my online [resume page][Resume].
+This resume is written as a markdown document, version controlled, an the latest version maintained on my [Github] page. Upon change, the document is compiled together with the stylesheet to HTML, Tested, converted to PDF and uploaded to my online [resume page][Resume].
 The whole process is automated by use of a Jenkins file and run in Docker containers. A containerized version of this resume is also available.
 
 
@@ -155,3 +171,5 @@ The whole process is automated by use of a Jenkins file and run in Docker contai
 [Resume]:    http://resume.marcusvandam.nl
 [AlternativeFM]: http://www.altfm.nl
 [Flickr Page]:   https://flickr.com/people/marcusvandam
+[DAB Partners]:  http://dabpartners.nl
+[TimelapseLive]: http://www.timelapse.live
