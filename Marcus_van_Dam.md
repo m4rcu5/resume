@@ -79,7 +79,7 @@ Marcus van Dam ![mugshot][]
 
     **Keywords:** DAB+, Long Range WiFi, Icecast, Docker, Kubernetes, InfluxDB, LAMP, Mail
 
-**Timelapse.Live** ![timelapselive][]
+**Timelapse.Live** ![timelapselogo][]
 :   *Co-Owner* (2014 to current)
 
     Branching off the photography hobby, together with a fellow photographer, who was already doing timelapses at Bevrijdingspop, we gave it a live twist. Our service provides a [high quality timelapse][TimelapseLive] with the latest live image and periodically generated video accessible per API. To provide this, we build custom hardware to control the DSLR coupled with an API to ingest and process the images. The delivery is done trough a scalable CDN.
@@ -163,6 +163,7 @@ The whole process is automated by use of a Jenkins file and run in Docker contai
 [oekotest]: images/oekotest.png "Oekotest" class="logo" height=75px
 [leaseweb]: images/leaseweb.png "LeaseWeb" class="logo" height=75px
 [zfmzandvoort]: images/zfm.png "ZFM Zandvoort" class="logo" height=75px
+[timelapselogo]: images/timelapselive.png "Timelapse.Live" class="logo" height=50px
 
 [Keybase]:   https://keybase.io/marcusvandam
 [LinkedIn]:  https://nl.linkedin.com/in/marcusvandam
