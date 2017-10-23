@@ -1,6 +1,4 @@
 # Makefile for resume
-#
-# TODO: Add release target
 
 # Base filename
 FILE = Marcus_van_Dam
@@ -17,7 +15,7 @@ help:
 	@echo "  html       to make the HTML file"
 	@echo "  pdf        to make a standalone pdf file"
 	@echo
-	@echo "  watch      to continuesly update the html output"
+	@echo "  watch      to continuously update the html output"
 
 #
 # File types to build
@@ -31,7 +29,7 @@ $(BUILDDIR)/%.html: %.md
 	@echo "Building HTML finished."
 	@cp -r css/ images/ --target-dir=$(@D)
 	@echo "Copied CSS and images."
-	@ln -s $(notdir $@) $(@D)/index.html
+	@ln -fs $(notdir $@) $(@D)/index.html
 	@echo "Linking index.html."
 
 $(BUILDDIR)/%.pdf: $(BUILDDIR)/%.html
