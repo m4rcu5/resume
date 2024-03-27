@@ -1,6 +1,6 @@
 # Resume of Marcus van Dam #
 
-## For Requiters and Hiring Managers ##
+## For Recruiters and Hiring Managers ##
 
 You are looking at the source of my resume. This resume is compiled, tested and deployed to HTML and PDF which you find below. If you are interested in the source, please read along.
 
