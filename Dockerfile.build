@@ -1,38 +1,28 @@
-FROM debian:8
+FROM debian:11 as builder
 
-#
-# Software versions used
-#
-ENV WK_MAYOR 0.12
-ENV WK_VERSION 0.12.4
-
-ENV MM_MAYOR 4
-
-#
 # prepare the build environment
-#
-RUN apt update && \
-    apt install -y build-essential curl git-core \
-                   fontconfig libfreetype6 libx11-6 libxext6 libxrender1 zlibc xz-utils
+RUN apt update && apt install -y build-essential cmake git-core
 
-#
-# fetch wkhtmltopdf
-#
+# fetch & compile MultiMarkdown
 WORKDIR /usr/src
 
-RUN curl -SL https://downloads.wkhtmltopdf.org/${WK_MAYOR}/${WK_VERSION}/wkhtmltox-${WK_VERSION}_linux-generic-amd64.tar.xz | tar xJ
+RUN git clone -b master https://github.com/fletcher/MultiMarkdown-6.git
 
-WORKDIR wkhtmltox
+run cd MultiMarkdown-6 && make && \
+    cd build && make
 
-RUN install -m 0755 bin/* /usr/local/bin
 
-#
-# fetch & compile multimarkdown
-#
-WORKDIR /usr/src
+FROM debian:11 as runtime
 
-RUN git clone --recursive https://github.com/fletcher/MultiMarkdown-${MM_MAYOR}.git
+ENV WK_VERSION 0.12.6.1-2
 
-WORKDIR MultiMarkdown-${MM_MAYOR}
+# install runtime dependencies
+RUN apt update && apt install -y wget make fontconfig libx11-6 libxext6 libxrender1 xfonts-base xfonts-75dpi libjpeg62-turbo
 
-RUN make && make install
+# install wkhtmltopdf
+RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/${WK_VERSION}/wkhtmltox_${WK_VERSION}.bullseye_amd64.deb && \
+    dpkg -i wkhtmltox_${WK_VERSION}.bullseye_amd64.deb
+
+# copy the MultiMarkdown binary
+COPY --from=builder /usr/src/MultiMarkdown-6/build/multimarkdown /usr/bin/
+
