@@ -132,7 +132,7 @@ Marcus van Dam ![mugshot][]
 
 ## Hobbies ##
 
-+ **Photography:** Resident Photographer at Bevrijdingspop/Beeckesteinpop/Rob Acda Award ([Flickr Page])
++ **Photography:** Resident Photographer at Bevrijdingspop/Beeckesteinpop/Rob Acda Award ([Photo Website])
 + **Radio:** As well as being the tech chief, my passion is recording live band performances in our studio. ([AlternativeFM])
 
 ## Public References ##
@@ -166,8 +166,8 @@ The whole process is automated by use of a Jenkins file and run in Docker contai
 [LinkedIn]:  https://nl.linkedin.com/in/marcusvandam
 [Github]:    https://github.com/m4rcu5
 [BitBucket]: https://bitbucket.org/m4rcu5_net
-[Resume]:    http://resume.marcusvandam.nl
-[AlternativeFM]: http://www.altfm.nl
-[Flickr Page]:   https://flickr.com/people/marcusvandam
+[Resume]:    https://resume.marcusvandam.nl
+[AlternativeFM]: https://www.altfm.nl
+[Photo Website]: https://marcusvandam.nl
 [DAB Partners]:  http://dabpartners.nl
 [TimelapseLive]: http://www.timelapse.live
