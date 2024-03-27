@@ -3,6 +3,15 @@
  * the Buttondown stylesheep. See base.css
  * /
 
+
+/* Import base stylesheet */
+@import "base.css";
+
+/* Import our external fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+/* we cannot exclude the protocol, otherwise PDF generation will fail */
+
 /* Company Logos */
 .logo {
     float: right;

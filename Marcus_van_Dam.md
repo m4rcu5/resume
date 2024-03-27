@@ -1,11 +1,8 @@
 ---
 Title:      Resume of Marcus van Dam  
-Author:     Marcus van Dam
-Date:       October 19, 2017
-CSS:        css/base.css
-CSS:        css/custom.css
-CSS:        http://fonts.googleapis.com/css?family=Open+Sans
-CSS:        http://fonts.googleapis.com/css?family=PT+Sans
+Author:     Marcus van Dam  
+Date:       March 27, 2024  
+CSS:        css/custom.css  
 ---
 
 Marcus van Dam ![mugshot][]
