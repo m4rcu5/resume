@@ -34,7 +34,7 @@ $(BUILDDIR)/%.html: %.md
 
 $(BUILDDIR)/%.pdf: $(BUILDDIR)/%.html
 	@mkdir -p $(@D)
-	wkhtmltopdf --print-media-type -B 0 -L 0 -R 0 -T 0 page $< $@
+	wkhtmltopdf --enable-local-file-access --print-media-type -B 0 -L 0 -R 0 -T 0 page $< $@
 	@echo "Building PDF finished."
 
 
