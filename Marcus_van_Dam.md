@@ -158,8 +158,8 @@ The whole process is automated by use of a Jenkins file and run in Docker contai
 [mugshot]: images/mugshot.png "Marcus van Dam" height=175px
 [gcs]: images/gcs.png "Ground Control Show" class="logo" height=75px
 [oekotest]: images/oekotest.png "Oekotest" class="logo" height=75px
-[leaseweb]: images/leaseweb.png "LeaseWeb" class="logo" height=75px
-[zfmzandvoort]: images/zfm.png "ZFM Zandvoort" class="logo" height=75px
+[leaseweb]: images/leaseweb.png "LeaseWeb" class="logo" height=125px
+[zfmzandvoort]: images/zfm.png "ZFM Zandvoort" class="logo" height=150px
 [timelapselogo]: images/timelapselive.png "Timelapse.Live" class="logo" height=50px
 
 [Keybase]:   https://keybase.io/marcusvandam
