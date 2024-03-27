@@ -19,11 +19,11 @@ Marcus van Dam ![mugshot][]
 
 ## Summary ##
 
-+ DevOps engineer and system architect with experience in Unix, Linux, Windows and VMWare environments. Deployment and design on bare metal and cloud platforms.
++ DevOps/SecOps engineer and system/network architect with experience in Unix, Linux, Windows and VMWare environments. Deployment and design on bare metal and cloud platforms.
 + Problem seeker, loves finding a solution, but rather fixes the problem before it manifests itself.
 + Programming and maintenance experience in Perl (main language), Ruby (Chef), PHP, Python and Shell scripting.
 + Only limited frontend skill.
-+ 10 years of experience in the field of hosting services.
++ 15 years of experience in the field of hosting services.
 + Network operator of the AS9017 network.
 + If there is another way, would not accept the half, quick and dirty solution.
 + Turning hobbies into work. Combining experience with hosting, photo, video, audio and network if possible.
@@ -176,7 +176,7 @@ The whole process is automated by use of a Jenkins file and run in Docker contai
 
 
 
-[mugshot]: images/mugshot.png "Marcus van Dam" height=175px
+[mugshot]: images/mugshot.jpg "Marcus van Dam" height=220px
 [gcs]: images/gcs.png "Ground Control Show" class="logo" height=75px
 [oekotest]: images/oekotest.png "Oekotest" class="logo" height=75px
 [leaseweb]: images/leaseweb.png "Leaseweb" class="logo" height=125px
@@ -186,9 +186,8 @@ The whole process is automated by use of a Jenkins file and run in Docker contai
 [Keybase]:   https://keybase.io/marcusvandam
 [LinkedIn]:  https://nl.linkedin.com/in/marcusvandam
 [Github]:    https://github.com/m4rcu5
-[BitBucket]: https://bitbucket.org/m4rcu5_net
+[Website]:   https://marcusvandam.nl
 [Resume]:    https://resume.marcusvandam.nl
 [AlternativeFM]: https://www.altfm.nl
-[Website]:   https://marcusvandam.nl
 [DAB Partners]:  http://dabpartners.nl
 [TimelapseLive]: http://www.timelapse.live
