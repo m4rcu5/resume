@@ -4,8 +4,8 @@
 
 You are looking at the source of my resume. This resume is compiled, tested and deployed to HTML and PDF which you find below. If you are interested in the source, please read along.
 
-* **HTML:** <http://resume.marcusvandam.nl/Marcus_van_Dam.html>
-* **PDF:** <http://resume.marcusvandam.nl/Marcus_van_Dam.pdf>
+* **HTML:** <https://resume.marcusvandam.nl/Marcus_van_Dam.html>
+* **PDF:** <https://resume.marcusvandam.nl/Marcus_van_Dam.pdf>
 
 
 ## For Engineers ##
@@ -14,7 +14,7 @@ You will not be able to use this repository without changing the `Jenkinsfile` (
 
 ### Setup ###
 
-The textual content of this resume is kept in markdown format as `Marcus_van_Dam.md`, which uses a slightly enriched markdown format as documented here: [MultiMarkdown](https://rawgit.com/fletcher/human-markdown-reference/master/index.html)
+The textual content of this resume is kept in markdown format as `Marcus_van_Dam.md`, which uses a slightly enriched markdown format as documented here: [MultiMarkdown](https://fletcher.github.io/MultiMarkdown-6/)
 
 The styling is handled by the stylesheets in the `css` folder and referenced at the top of the markdown file.
 
@@ -57,7 +57,7 @@ The repository also contains a `Jenkinsfile` which performs the following steps.
 2. Build the Docker build container
 3. Compile the HTML and PDF files
 4. Test the HTML artifact with `html-proofer`
-5. Publish the artifact to the artifact storage and [my webserver](http://resume.marcusvandam.nl)
+5. Publish the artifact to the artifact storage and [my webserver](https://resume.marcusvandam.nl)
 6. Build a production Docker container (based on Nginx)
 7. Upload this container to my private registry
 
