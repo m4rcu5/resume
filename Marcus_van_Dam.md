@@ -31,8 +31,28 @@ Marcus van Dam ![mugshot][]
 
 ## Experience ##
 
-**LeaseWeb** ![leaseweb][]
-:   *Infrastructure Architect* (2016 to current)
+**Leaseweb** ![leaseweb][]
+:   *Senior Security Engineer* (2019 to current)
+
+    With the lateral move as architect at the product engineering department to the internal security department, I was able to apply much of the same principals of standardization and automation to Leaseweb's internal office network. The internal network suffered from the rapid growth of the company and felt like the right challenge.
+
+    **Highlights:**
+
+    + Redesign and standardization of the office network. Which involved segmenting the network into zones applicable to all DC and office locations. Splitting the network into a hub and spoke layout. Ensuring reliable backhaul communications between the sites, using BGP as dynamic routing protocol. Additionally providing all sites with a out-of-band solution for remote management.
+
+    + Automating the firewall deployment and address space calculations using Ansible. During the before mentioned redesign, 20+ sites had to be deployed or reconfigured. To be able to reliable deploy a baseline configuration and do all the IP subnet calculations, the deployment was automated with Ansible. This would provide the base for all future firewalls.
+
+    + Mergers and acquisitions provide unique challenges on how to interconnect the newly acquired companies with the current office network. Doing so while keeping the same level of security, separation, and sticking to the design standards. Being involved in the due diligence phase, and taking the role of project/team lead in the migration phase.
+
+    + Setting up a central logging platform based on the ELK stack, to ingest, enrich, store, and alert, based on various log sources. Including the Palo Alto firewalls, Windows logs, antivirus software, and more. For several sources, custom parsers had to be written, and alerts defined. This also provided a great way to troubleshoot network issues, or correlate events across the various firewalls.
+
+    + Auditing and certifications. Aside from the infrastructure, I've been involved in the internal auditing and certifications of our offices and datacenter locations.
+
+    + Redesign of internal PKI infrastructure, providing a migration path using cross-signing, eventually separating out the various departments and roles.
+
+    **Keywords:** Palo Alto, NGN Firewalling, VPN, User-ID, Ansible, Automation, SecOps, ISO/SOC, PKI
+
+:   *Infrastructure Architect* (2016 to 2019)
 
     The role of Infrastructure Architect is one with focus on technical expertise. Your responsibilities include defining the systems architecture vision, strategy and technical solutions for all product engineering teams and integrate with the development roadmap. Align all the teams on the existing architecture and defined the new standards. Focus on automation and scalability. Coordinate incidents across departments. Function as the last line escalation point for all teams and help train the engineers.
 
@@ -40,14 +60,14 @@ Marcus van Dam ![mugshot][]
 
 :   *Hosting Operations Engineer* (2011 to 2015)
 
-    As a Hosting Operations Engineer (formerly known as Technical Support) you are responsible for all customer facing hosting platforms (DNS, Email, Web) and its infrastructure. In this role my focus is at the design and security of the existing setups and new designs. In the last 6 months of this position LeaseWeb as an organization moved to an agile way of working. Merging the former Hosting Engineers with with the Software Developers, forming the Product Engineering team. Together you are operationally responsible for the applications and platforms in order to make sure that LeaseWeb’s products and services are available to our customers. Test, deploy, administer, monitor and maintain the infrastructure.
+    As a Hosting Operations Engineer (formerly known as Technical Support) you are responsible for all customer facing hosting platforms (DNS, Email, Web) and its infrastructure. In this role my focus is at the design and security of the existing setups and new designs. In the last 6 months of this position Leaseweb as an organization moved to an agile way of working. Merging the former Hosting Engineers with with the Software Developers, forming the Product Engineering team. Together you are operationally responsible for the applications and platforms in order to make sure that Leaseweb’s products and services are available to our customers. Test, deploy, administer, monitor and maintain the infrastructure.
 
     **Highlights:**
 
-    + Redesign and live-migration of the CL2000 webhosting platform. LeaseWeb's webhosting platform used to be based on stand-alone servers running the Plesk management panel. The new design allowed for on demand scaling in a clustered setup. Being build upon NFS storage, separate MySQL servers and Plesk interface machines. Using HAProxy as loadbalancers in HA setup.
+    + Redesign and live-migration of the CL2000 webhosting platform. Leaseweb's webhosting platform used to be based on stand-alone servers running the Plesk management panel. The new design allowed for on demand scaling in a clustered setup. Being build upon NFS storage, separate MySQL servers and Plesk interface machines. Using HAProxy as loadbalancers in HA setup.
 
     + Chef
-    This has now become LeaseWeb's main configuration management system. I have started with the initial PoC of Chef within LeaseWeb's infrastructure and supported fellow engineers in the implementation of Chef in their infrastructure. This also paved the way for automated deployments of application code. 
+    This has now become Leaseweb's main configuration management system. I have started with the initial PoC of Chef within Leaseweb's infrastructure and supported fellow engineers in the implementation of Chef in their infrastructure. This also paved the way for automated deployments of application code. 
 
     + Remote Management
     Together with a bare metal focused development team we designed and implemented a remote management platform for our dedicated servers. Using FreeBSD for VPN access and concentrator servers. Using the internal PF subsystem to grant and deny access on a per client basis.
@@ -59,7 +79,7 @@ Marcus van Dam ![mugshot][]
 
 :   *Provisioning Engineer* (2009 to 2011)
 
-    As a provisioning engineer at LeaseWeb, your main focus is at the delivery of Bare Metal and Colocation services, as well as new datacenter POP deployments.
+    As a provisioning engineer at Leaseweb, your main focus is at the delivery of Bare Metal and Colocation services, as well as new datacenter POP deployments.
 
     **Highlights:**
 
@@ -134,6 +154,7 @@ Marcus van Dam ![mugshot][]
 
 + **Photography:** Resident Photographer at Bevrijdingspop/Beeckesteinpop/Rob Acda Award ([Website])
 + **Radio:** As well as being the tech chief, my passion is recording live band performances in our studio. ([AlternativeFM])
++ **CTFs:** I like solving puzzles, CTFs, especially in a family style, provide the perfect pastime to do so and meet new people.
 
 ## Public References ##
 
@@ -142,7 +163,7 @@ Marcus van Dam ![mugshot][]
 + [Cloud Computing's History and Impact](http://www.techsummit.io/2017/08/14/cloud-computing-history.html)
 
 ### Talks ###
-+ [Chef at LeaseWeb: past, present and future](https://www.youtube.com/watch?v=Uwv9gLdjvo8)
++ [Chef at Leaseweb: past, present and future](https://www.youtube.com/watch?v=Uwv9gLdjvo8)
 
 
 
@@ -158,7 +179,7 @@ The whole process is automated by use of a Jenkins file and run in Docker contai
 [mugshot]: images/mugshot.png "Marcus van Dam" height=175px
 [gcs]: images/gcs.png "Ground Control Show" class="logo" height=75px
 [oekotest]: images/oekotest.png "Oekotest" class="logo" height=75px
-[leaseweb]: images/leaseweb.png "LeaseWeb" class="logo" height=125px
+[leaseweb]: images/leaseweb.png "Leaseweb" class="logo" height=125px
 [zfmzandvoort]: images/zfm.png "ZFM Zandvoort" class="logo" height=150px
 [timelapselogo]: images/timelapselive.png "Timelapse.Live" class="logo" height=50px
 
