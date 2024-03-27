@@ -9,11 +9,11 @@ Marcus van Dam ![mugshot][]
 ===========================
 
 |:-----------------------------|-----------------------------:|
-|Fahrenheitstraat 2            |   marcus (at) marcusvandam.nl|
-|2041 CH Zandvoort             |       GPG: 0xB44C673E920EE3A4|
+|\<REDACTED\>                  |   marcus (at) marcusvandam.nl|
+|2041 BS Zandvoort             |       GPG: 0xB44C673E920EE3A4|
 |Netherlands                   |                     [Keybase]|
 |+31 6 28 553 497              |                      [Github]|
-|[LinkedIn]                    |                   [BitBucket]|
+|[LinkedIn]                    |                     [Website]|
 
 
 
@@ -132,7 +132,7 @@ Marcus van Dam ![mugshot][]
 
 ## Hobbies ##
 
-+ **Photography:** Resident Photographer at Bevrijdingspop/Beeckesteinpop/Rob Acda Award ([Photo Website])
++ **Photography:** Resident Photographer at Bevrijdingspop/Beeckesteinpop/Rob Acda Award ([Website])
 + **Radio:** As well as being the tech chief, my passion is recording live band performances in our studio. ([AlternativeFM])
 
 ## Public References ##
@@ -168,6 +168,6 @@ The whole process is automated by use of a Jenkins file and run in Docker contai
 [BitBucket]: https://bitbucket.org/m4rcu5_net
 [Resume]:    https://resume.marcusvandam.nl
 [AlternativeFM]: https://www.altfm.nl
-[Photo Website]: https://marcusvandam.nl
+[Website]:   https://marcusvandam.nl
 [DAB Partners]:  http://dabpartners.nl
 [TimelapseLive]: http://www.timelapse.live
