@@ -7,7 +7,7 @@ FILE = Marcus_van_Dam
 BUILDDIR = build
 
 # Targets
-.PHONY: help html pdf release
+.PHONY: help html pdf release clean
 
 # Some help using this Makefile
 help:
@@ -16,6 +16,7 @@ help:
 	@echo "  pdf        to make a standalone pdf file"
 	@echo
 	@echo "  watch      to continuously update the html output"
+	@echo "  clean      to remove the build directory"
 
 #
 # File types to build
@@ -45,3 +46,8 @@ watch: html
 	@echo "Watching $(FILE).md for changes."
 	@echo
 	while true; do inotifywait -e modify $(FILE).md && make html; done
+
+# Clean target
+clean:
+	rm -rf $(BUILDDIR)
+	@echo "Cleaned build directory."
