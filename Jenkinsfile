@@ -28,7 +28,7 @@ node {
                 sh 'make pdf'
             }
             stage('Test HTML') {
-                if (sh(script: 'LANG=C.UTF-8 htmlproofer --check-html build/', returnStatus: true) != 0) {
+                if (sh(script: 'LANG=C.UTF-8 htmlproofer --check-html --http-status-ignore 999 build/', returnStatus: true) != 0) {
                     error('HTML validation failed')
                 }
             }

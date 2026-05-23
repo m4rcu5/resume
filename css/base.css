@@ -4,38 +4,45 @@
     Author: Ryan Gray
     Date: 15 Feb 2011
     Revised: 21 Feb 2012
-
-    General style is clean, with minimal re-definition of the defaults or
-    overrides of user font settings. The body text and header styles are
-    left alone except title, author and date classes are centered. A Pandoc TOC
-    is not printed, URLs are printed after hyperlinks in parentheses.
-    Block quotes are italicized. Tables are lightly styled with lines above
-    and below the table and below the header with a boldface header. Code
-    blocks are line wrapped.
-
-    All elements that Pandoc and MultiMarkdown use should be listed here, even
+   
+    General style is clean, with minimal re-definition of the defaults. It also 
+    contains built-in print optimizations. 
+    
+    All elements that Pandoc and MultiMarkdown use should be listed here, even 
     if the style is empty so you can easily add styling to anything.
-
-    There are some elements in here for HTML5 output of Pandoc, but I have not
+    
+    There are some elements in here for HTML5 output of Pandoc, but I have not 
     gotten around to testing that yet.
 */
 
 /* NOTES:
 
     Stuff tried and failed:
-
-    It seems that specifying font-family:serif in Safari will always use
+    
+    It seems that specifying font-family:serif in Safari will always use 
     Times New Roman rather than the user's preferences setting.
-
-    Making the font size different or a fixed value for print in case the screen
-    font size is making the print font too big: Making font-size different for
-    print than for screen causes horizontal lines to disappear in math when using
+    
+    Making the font size different or a fixed value for print in case the screen 
+    font size is making the print font too big: Making font-size different for 
+    print than for screen causes horizontal lines to disappear in math when using 
     MathJax under Safari.
 */
 
+/* Keep the body at most 60em wide and center if widnow is wider, but keep the 
+   0.5em margin as padding for when the window is small it still has a margin.
+*/
+body
+    {
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    }
+
 /* ---- Front Matter ---- */
 
-/* Pandoc header DIV. Contains .title, .author and .date. Comes before div#TOC.
+/* Pandoc header DIV. Contains .title, .author and .date. Comes before div#TOC. 
    Only appears if one of those three are in the document.
 */
 
@@ -49,16 +56,51 @@ div#header, header
 .title /* Pandoc title header (h1.title) */
     {
     text-align: center;
+    font-size: 220%; /* A little bigger than H1 */
+    font-family: "Liberation Serif", "Georgia", "Times New Roman", serif; /* Serif headers */
+    }
+.subtitle /* Pandoc subtitle (p.subtitle) */
+    {
+    text-align: center;
+    font-size: 120%;
+    font-style: italic;
     }
 
-.author, .date /* Pandoc author(s) and date headers (h2.author and h3.date) */
+.author, .date /* Pandoc author(s) and date text (p.author and p.date) */
     {
     text-align: center;
     }
 
+/* Abstract: 
+   To use it, add an "abstract:" YAML variable to your document which will need 
+   to follow the multi-line variable value rules, see the example at:
+   http://pandoc.org/MANUAL.html#extension-yaml_metadata_block
+   The default abstract-title is "Abstract".
+ */
+.abstract
+    {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 0.5em;
+    text-align: justify;
+    font-style: italic;
+    font-size: 90%;
+    }
+.abstract-title /* A div within div.abstract */
+    {
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    margin-left: inherit; /* don't nest with --section-div rule */
+    margin-bottom: 1em;
+    margin-top: 1.4em;
+    }
+
 /* Pandoc table of contents DIV when using the --toc option.
-   NOTE: this doesn't support Pandoc's --id-prefix option for #TOC and #header.
-   Probably would need to use div[id$='TOC'] and div[id$='header'] as selectors.
+   NOTE: this doesn't support Pandoc's --id-prefix option for #TOC and #header. 
+   Could use div[id$='TOC'] and div[id$='header'], etc., as selectors.
 */
 
 div#TOC, nav#TOC
@@ -66,6 +108,7 @@ div#TOC, nav#TOC
     /* Put border on bottom to separate it from body. */
     border-bottom: 1px solid #aaa;
     margin-bottom: 0.5em;
+    font-size: 90%;
     }
 
 @media print
@@ -80,21 +123,69 @@ div#TOC, nav#TOC
 /* ---- Headers and sections ---- */
 
 h1, h2, h3, h4, h5, h6
-{
-    font-family: "PT Sans", sans-serif;
+    {
+    font-family: "Helvetica Neue", Helvetica, "Liberation Sans", Calibri, Arial, sans-serif; /* Sans-serif headers */
+
+    /* font-family: "Liberation Serif", "Georgia", "Times New Roman", serif; /* Serif headers */
+
+    page-break-after: avoid; /* Firefox, Chrome, and Safari do not support the property value "avoid" */
+    }
+
+/* Header level specific - 
+   Make the spacing before and after a total of 1.68em (in body font) with 60% above
+ */
+h1  {
+    /* font-size: 200%; */
+    margin-block-start: 0.844em; /* was 0.67em*200%=1.34em'=21.4px */
+    margin-block-end: 0.563em; /* now 27,18px/16px/200% */
+    }
+
+h2  {
+    /* font-size: 150%; */
+    margin-block-start: 1.125em; /* 0.83em*150%=1.25em'=20px */
+    margin-block-end: 0.75em; /* now 1.4em'*2/150% split 60/40%=26.9/18px */
+    }
+h3  {
+    /* font-size: 117%; */
+    margin-block-start: 1.442em; /* 1.00em*117%=1.17em' */
+    margin-block-end: 0.962em; /* now 1.4em'*2/117% split 60/40%=26.9/17.9px */
+}
+h4  {
+    /* font-size: 100%; */
+    margin-block-start: 1.688em; /* 1.33em*100%=1.33em' */
+    margin-block-end: 1.125em; /*  now 1.4em'*2/100% split 60/40%=26.9/17.9px */
+}
+h5  {
+    /* font-size: 83%; */
+    /* margin-block-start: 2.033em; /* 1.67em*83%=1.39em' */
+    /* margin-block-end: 1.355em; /* 1.67em*83%=1.39em' */
+    font-size: 100%;
+    margin-block-start: 1.688em; /* 1.33em*100%=1.33em' */
+    margin-block-end: 1.125em; /*  now 1.4em'*2/100% split 60/40%=26.9/17.9px */
+    font-style: italic;
+}
+h6  {
+    /* font-size: 67%; */
+    /* margin-block-start: 2.529em; /* 2.33em*67%=1.56em' */
+    /* margin-block-end: 1.679em; /* 2.33em*67%=1.56em' */
+    font-size: 100%;
+    margin-block-start: 1.688em; /* 1.33em*100%=1.33em' */
+    margin-block-end: 1.125em; /*  now 1.4em'*2/100% split 60/40%=26.9/17.9px */
+    font-style: italic;
+    font-weight: normal;
 }
 
 /* Pandoc with --section-divs option */
 
 div div, section section /* Nested sections */
     {
-    margin-left: 2em; /* This will increasingly indent nested header sections */
+    margin-left: 1.5em; /* This will increasingly indent nested header sections. 1.5 Keep it in line with bullet indent of parent section */
     }
 
 p {}
 
 blockquote
-    {
+    { 
     font-style: italic;
     }
 
@@ -104,11 +195,12 @@ li /* All list items */
 
 li > p /* Loosely spaced list item */
     {
-    margin-top: 1em; /* IE: lack of space above a <li> when the item is inside a <p> */
+    margin-top: 1em; /* For IE's lack of space above a <li> when the item is inside a <p> */
     }
 
 ul /* Whole unordered list */
     {
+    padding-left: 2em; /* So bullets aren't quite so indented but items still line up with numbered items at the same level. */
     }
 
 ul li /* Unordered list item */
@@ -117,14 +209,21 @@ ul li /* Unordered list item */
 
 ol /* Whole ordered list */
     {
+    padding-left: 2em; /* So numbers aren't indented quite as much from the paragraph level they are in as the default does to allow for really big numbers */
     }
 
 ol li /* Ordered list item */
     {
     }
 
-hr {}
-
+hr /* Simple line for normal rules */
+    {
+    border: none;
+    height: 1pt;
+    background: none;
+    border-top: 1pt solid #333;
+    }
+    
 /* ---- Some span elements --- */
 
 sub /* Subscripts. Pandoc: H~2~O */
@@ -134,11 +233,11 @@ sub /* Subscripts. Pandoc: H~2~O */
 sup /* Superscripts. Pandoc: The 2^nd^ try. */
     {
     }
-
+    
 em /* Emphasis. Markdown: *emphasis* or _emphasis_ */
     {
     }
-
+    
 em > em /* Emphasis within emphasis: *This is all *emphasized* except that* */
     {
     font-style: normal;
@@ -152,32 +251,51 @@ strong /* Markdown **strong** or __strong__ */
 
 a /* All links */
     {
-    /* Keep links clean. On screen, they are colored; in print, they do nothing anyway. */
-    text-decoration: none;
     }
 
+/* Underline links on screen, except in headers and TOC */
+
 @media screen
-    {
+{
+    a   {
+        text-decoration: underline dotted; /* Static is subtle */
+        }
+
+    #TOC a /*, h1>a, h2>a, h3>a, h4>a, h5>a, h6>a */
+        {
+        text-decoration: none;
+        border-bottom: inherit;
+        }
     a:hover
         {
-        /* On hover, we indicate a bit more that it is a link. */
-        text-decoration: underline;
+        text-decoration: underline solid blue; / * Hover emphasizes */
         }
-    }
+    /* Have linked images not show an outline unless hovered but reserve
+       the space for the outline so it doesn't move around. */
+    a img
+        {
+        text-decoration: none;
+        border: 1px solid white;
+        }
+    a img:hover {
+        text-decoration: none;
+        border: 1px dotted blue;
+        }
+}
 
 @media print
     {
     a   {
-        /* In print, a colored link is useless, so un-style it. */
-        color: black;
-        background: transparent;
+        /* In print, styled link text is useless, so un-style it. */
+        text-decoration: none;
+        color: inherit;
         }
-
+        
     a[href^="http://"]:after, a[href^="https://"]:after
         {
         /* However, links that go somewhere else, might be useful to the reader,
-           so for http and https links, print the URL after what was the link
-           text in parens
+           so for http and https links, print the URL after what was the link 
+           text in parens.
         */
         content: " (" attr(href) ") ";
         font-size: 90%;
@@ -188,41 +306,59 @@ a /* All links */
 
 img
     {
-    /* Let it be inline left/right where it wants to be, but verticality make
-       it in the middle to look nicer, but opinions differ, and if in a multi-line
-       paragraph, it might not be so great.
+    /* Let it be inline left/right where it wants to be, but verticality make 
+       it in the middle to look nicer, but opinions differ, and if in a multi-line 
+       paragraph, it might not be so great. 
     */
     vertical-align: middle;
     }
 
-div.figure /* Pandoc figure-style image */
+@media print
+    {
+    img
+        {
+        /* Fit in letter page of 8.5"x11" with 1" margins and 0.5" for caption */
+        max-height: 8.5in;
+        max-width:  6.5in;
+        }
+    }
+
+div.figure, figure /* Pandoc figure-style image container */
     {
     /* Center the image and caption */
-    margin-left: auto;
+    margin-left:  auto;
     margin-right: auto;
     text-align: center;
     font-style: italic;
+    font-size:   small;
     }
 
-p.caption /* Pandoc figure-style caption within div.figure */
+p.caption, figcaption /* Pandoc figure-style caption within figure container */
     {
     /* Inherits div.figure props by default */
     }
 
 /* ---- Code blocks and spans ---- */
 
-pre, code
+pre, code 
     {
-    background-color: #fdf7ee;
-    /* BEGIN word wrap */
-    /* Need all the following to word wrap instead of scroll box */
-    /* This will override the overflow:auto if present */
-    white-space: pre-wrap; /* css-3 */
-    white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
-    white-space: -pre-wrap; /* Opera 4-6 */
-    white-space: -o-pre-wrap; /* Opera 7 */
-    word-wrap: break-word; /* Internet Explorer 5.5+ */
-    /* END word wrap */
+    /* Preserve whitespace, but allow word wrapping */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    }
+
+/* Coloring */
+
+/* This will be only for code spans */
+code
+    {
+    background-color: #E8E8E8;
+    }
+    
+/* This will be only for code blocks */
+pre, pre > code
+    {
+    background-color: #E8E8E8;
     }
 
 pre /* Code blocks */
@@ -230,7 +366,7 @@ pre /* Code blocks */
     /* Distinguish pre blocks from other text by more than the font with a background tint. */
     padding: 0.5em; /* Since we have a background color */
     border-radius: 5px; /* Softens it */
-    /* Give it a some definition */
+    /* Give it a some definition, and if printing doesn't print the background */
     border: 1px solid #aaa;
     /* Set it off left and right, seems to look a bit nicer when we have a background */
     margin-left:  0.5em;
@@ -241,74 +377,109 @@ pre /* Code blocks */
     {
     pre
         {
-        /* On screen, use an auto scroll box for long lines, unless word-wrap is enabled */
+        /* Shadow on screen instead of border */
+        border: none;
+        box-shadow: inset 1px 1px 3px #b0b0b0;
+        }
+
+    pre, pre > code
+        {
+        /* On screen, use an auto scroll box for long lines in a code block */
         white-space: pre;
+        word-wrap: normal;
         overflow: auto;
-        /* Dotted looks better on screen and solid seems to print better. */
-        border: 1px dotted #777;
         }
     }
 
-code /* All inline code spans */
-    {
-    }
-
-p > code, li > code /* Code spans in paragraphs and tight lists */
+code /* All inline code spans (applies to pre>code as well) */
     {
     /* Pad a little from adjacent text */
-    padding-left:  2px;
-    padding-right: 2px;
+    padding-left:  0.3em;
+    padding-right: 0.3em;
+    padding-top:    0.1em;
+    padding-bottom: 0.1em;
+    border-radius: 3px;
     }
 
-li > p code /* Code span in a loose list */
+@media screen
     {
-    /* We have room for some more background color above and below */
-    padding: 2px;
+    code
+        {
+        box-shadow: inset 0px 0px 2px #b0b0b0;
+        }
     }
 
+pre > code /* Code span in a code block */
+    {
+    /* Remove some styling on the span box */
+    padding: 0;
+    border: none;
+    border-radius: none;
+    background-color: inherit;
+    box-shadow: none;
+    }
+    
+code.url /* Pandoc simple URLs */
+    {
+    background-color: inherit; /* Un-color from previous rules */
+    box-shadow: none;
+    }
+    
 /* ---- Math ---- */
 
-span.math /* Pandoc inline math default and --jsmath inline math */
-    {
-    /* Tried font-style:italic here, and it messed up MathJax rendering in some browsers. Maybe don't mess with at all. */
-    }
+/* Things here can mess up the HTML math renderers though. */
 
-div.math /* Pandoc --jsmath display math */
+span.math /* Display or inline math */
     {
     }
-
+    
+span.math.inline /* inline math only */
+    {
+    }
+    
+span.math.display /* Display math only */
+    {
+    }
+    
 span.LaTeX /* Pandoc --latexmathml math */
     {
-    }
+    } 
 
 eq /* Pandoc --gladtex math */
     {
-    }
+    } 
 
 /* ---- Tables ---- */
 
-/*  A clean textbook-like style with horizontal lines above and below and under
+/*  A clean textbook-like style with horizontal lines above and below and under 
     the header. Rows highlight on hover to help scanning the table on screen.
 */
 
 table
     {
-    width: 450px;
     border-collapse: collapse;
-    border-spacing: 0;/* IE 6 */
-    border-bottom: 2pt solid #000;
-    border-top: 2pt solid #000;/* The caption on top will not have a bottom-border *//* Center */
-    }
+    border-spacing: 0; /* IE 6 */
 
-thead /* Entire table header */
+    border-top:    2pt solid black; /* The caption on top will not have a bottom-border */
+    border-bottom: 2pt solid black;
+
+    /* Center */
+    margin-left:  auto;
+    margin-right: auto;
+    }
+    
+thead, th /* Entire table header */
     {
-    border-bottom: 1pt solid #000;
-    background-color: #eee; /* Does this BG print well? */
+    /* Well, we add th here since IE doesn't seem to respond to thead. 
+       This will work until we have multi-row headers.
+    */
+    border-bottom: 1pt solid black;
+    background-color: #E8E8E8;
     }
 
 tr.header /* Each header row */
     {
-    }
+    } 
 
 tbody /* Entire table  body */
     {
@@ -318,17 +489,18 @@ tbody /* Entire table  body */
 
 tr  {
     }
-tr.odd:hover, tr.even:hover /* Use .odd and .even classes to avoid styling rows in other tables */
-    {
-    background-color: #eee;
-    }
 
 /* Odd and even rows */
-tr.odd {}
+tr.odd  {}
 tr.even {}
 
-td, th /* Table cells and table header cells */
+tr.odd:hover, tr.even:hover /* Use .odd and .even classes to avoid styling rows in other tables */
     {
+    background-color: #E0E0E0;
+    }
+    
+td, th /* Table cells and table header cells */
+    { 
     vertical-align: top; /* Word */
     vertical-align: baseline; /* Others */
     padding-left:   0.5em;
@@ -336,14 +508,14 @@ td, th /* Table cells and table header cells */
     padding-top:    0.2em;
     padding-bottom: 0.2em;
     }
-
+    
 /* Removes padding on left and right of table for a tight look. Good if thead has no background color*/
 /*
 tr td:last-child, tr th:last-child
     {
     padding-right: 0;
     }
-tr td:first-child, tr th:first-child
+tr td:first-child, tr th:first-child 
     {
     padding-left: 0;
     }
@@ -351,7 +523,7 @@ tr td:first-child, tr th:first-child
 
 th /* Table header cells */
     {
-    font-weight: bold;
+    font-weight: bold; 
     }
 
 tfoot /* Table footer (what appears here if caption is on top?) */
@@ -362,10 +534,11 @@ caption /* This is for a table caption tag, not the p.caption Pandoc uses in a d
     {
     caption-side: top;
     border: none;
-    font-size: 0.9em;
+    font-size:  0.9em;
     font-style: italic;
     text-align: center;
-    margin-bottom: 0.3em; /* Good for when on top */
+    margin-top:  0.5em;
+    margin-bottom:  0.3em;
     padding-bottom: 0.2em;
     }
 
@@ -373,9 +546,9 @@ caption /* This is for a table caption tag, not the p.caption Pandoc uses in a d
 
 dl /* The whole list */
     {
-    border-top: 2pt solid black;
+    border-top:  2pt solid #888;
     padding-top: 0.5em;
-    border-bottom: 2pt solid black;
+    border-bottom: 2pt solid #888;
     }
 
 dt /* Definition term */
@@ -383,15 +556,12 @@ dt /* Definition term */
     font-weight: bold;
     }
 
-dt {
-}
-
 dd+dt /* 2nd or greater term in the list */
     {
-    border-top: 1pt solid black;
+    border-top:  1pt solid #888;
     padding-top: 0.5em;
     }
-
+    
 dd /* A definition */
     {
     margin-bottom: 0.5em;
@@ -399,13 +569,13 @@ dd /* A definition */
 
 dd+dd /* 2nd or greater definition of a term */
     {
-    border-top: 1px solid black;/* To separate multiple definitions */
+    border-top: 1px solid #888; /* To separate multiple definitions */
     }
-
+    
 /* ---- Footnotes ---- */
 
 a.footnote, a.footnoteRef { /* Pandoc, MultiMarkdown footnote links */
-    font-size: small;
+    font-size: small; 
     vertical-align: text-top;
 }
 
@@ -421,26 +591,188 @@ a[href^="#fnref"], a.reversefootnote /* Pandoc, MultiMarkdown, ?? footnote back 
         display: none;
         }
     }
-
-div.footnotes /* Pandoc footnotes div at end of the document */
+    
+.footnotes /* Pandoc footnotes div or section at end of the document */
+    {
+    }
+    
+.footnotes>ol>li[id^="fn"] /* A footnote item within that section */
     {
     }
 
-div.footnotes li[id^="fn"] /* A footnote item within that div */
+/* Fancy rule for footnotes section (from http://css-tricks.com/examples/hrs/) */
+
+.footnotes > hr
     {
+    margin-top: 1em;
+    border-top: double;
+    border-color: #303030;
+    border-width: 3pt;
+    text-align: center;
     }
 
-/* You can class stuff as "noprint" to not print.
-   Useful since you can't set this media conditional inside an HTML element's
-   style attribute (I think), and you don't want to make another stylesheet that
-   imports this one and adds a class just to do this.
+/* Convenience classes for DIVs or other things inserted into the Markdown */
+
+/* You can class stuff as "noprint" to not print. 
+   Useful since you can't set this media conditional inside an HTML element's 
+   style attribute (I think).
 */
 
+@media screen
+    {
+    .noscreen /* Don't display on screen (something for print only) */
+        {
+        display: none;
+        }
+    }
+    
 @media print
     {
-    .noprint
+    .noprint /* Don't display in print (something for screen only) */
         {
         display:none;
         }
     }
 
+.block-center
+    {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    }
+.text-center
+    {
+    text-align: center;
+    }
+
+.block-right
+    {
+    margin-left: auto;
+    margin-right: 0;
+    display: table;
+    }
+.text-right
+    {
+    text-align: right;
+    }
+
+.block-left
+    {
+    margin-left: 0;
+    margin-right: auto;
+    display: table;
+    }
+.text-left
+    {
+    text-align: left;
+    }
+
+/* Image tweaking classes */
+
+@media screen
+{
+img.shadow /* drop shadow */
+    {
+    box-shadow: 3px 3px 5px #b0b0b0;
+    }
+}
+@media print
+{
+img.shadow
+    {
+    box-shadow: 3px 3px 0px #b0b0b0;
+    }
+}
+
+img.pad /* padding around all edges */
+    {
+    padding: 10px;
+    }
+
+img.rounded /* Rounded corners */
+    {
+    border-radius: 10px;
+    }
+
+img.border /* Box around with no border */
+    {
+    border: 1pt solid #c0c0c0;
+    }
+
+img.well
+    {
+    box-shadow: 0px 0px 5px #b0b0b0 inset;
+    }
+    
+
+img.right /* float right */
+    {
+    float: right;
+    clear: right;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+img.left /* float left */
+    {
+    float: left;
+    clear: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+div.figure img, figure img /* Put back these props for figure images since we can't exclude them easily in the prior rules */
+    {
+    float: none; /* Don't allow fig img to float */
+    clear: both;
+    }
+    
+img.top
+    {
+    vertical-align: top;
+    }
+    
+img.bottom
+    {
+    vertical-align: bottom;
+    }
+
+img.middle
+    {
+    vertical-align: middle;
+    }
+
+img.baseline
+    {
+    vertical-align: baseline;
+    }
+
+img.margin /* Give inline image some space on the sides */
+    {
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+
+/* Keep images from getting too large */
+
+img.max100
+    {
+    max-width: 100%;
+    }
+    
+img.max95 /* Sometimes 95% works better */
+    {
+    max-width: 95%;
+    }
+    
+img.max50
+    {
+    max-width: 50%;
+    }
+    
+img.max45 /* Sometimes 45% lets you get two side by side better */
+    {
+    max-width: 45%;
+    }

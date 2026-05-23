@@ -25,14 +25,12 @@ img#mugshot {
     border: 1px solid;
     border-radius: 8%;
     margin: 45px 25px;
-    box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.75);
 }
 
 /* Default html markup */
 html {
     background-color: gray;
     font-family: "Open Sans", sans-serif;
-    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -42,18 +40,9 @@ body {
     padding: 5px 15px;
 }
 
-/* Format for different media */
-@media screen {
-    body {
-        border-radius: 0.45%;
-        border: 1px solid;
-    }
-}
-
-@media print {
-    table {
-        width: 650px;
-    }
+table {
+    width: 450px;
+    margin-left: unset;
 }
 
 /* Paragraph formatting */
@@ -65,14 +54,38 @@ p {
     margin-right: 100px;
 }
 
+/* Set header font */
+h1, h2, h3 {
+    font-family: "PT Sans", sans-serif;
+}
+
 /* Adjust title size */
 h1 {
     font-size: 3em;
 }
 
-/* Avoid pagebreaks on print */
-h1, h2, h3 {
-     page-break-after: avoid;
+/* Format for different media */
+@media screen {
+    body {
+        border-radius: 4px;
+        border: 1px solid;
+    }
+
+    img#mugshot {
+        box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
+    }
 }
 
+@media print {
+    html {
+        background-color: white;
+    }
 
+    body {
+        width: auto;
+    }
+
+    table {
+        width: 650px;
+    }
+}
