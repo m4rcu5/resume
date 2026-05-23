@@ -1,8 +1,8 @@
 ---
-Title:      Resume of Marcus van Dam  
-Author:     Marcus van Dam  
-Date:       March 27, 2024  
-CSS:        css/custom.css  
+Title:      Resume of Marcus van Dam
+Author:     Marcus van Dam
+Date:       March 27, 2024
+CSS:        css/custom.css
 ---
 
 Marcus van Dam ![mugshot][]
@@ -67,7 +67,7 @@ Marcus van Dam ![mugshot][]
     + Redesign and live-migration of the CL2000 webhosting platform. Leaseweb's webhosting platform used to be based on stand-alone servers running the Plesk management panel. The new design allowed for on demand scaling in a clustered setup. Being build upon NFS storage, separate MySQL servers and Plesk interface machines. Using HAProxy as loadbalancers in HA setup.
 
     + Chef
-    This has now become Leaseweb's main configuration management system. I have started with the initial PoC of Chef within Leaseweb's infrastructure and supported fellow engineers in the implementation of Chef in their infrastructure. This also paved the way for automated deployments of application code. 
+    This has now become Leaseweb's main configuration management system. I have started with the initial PoC of Chef within Leaseweb's infrastructure and supported fellow engineers in the implementation of Chef in their infrastructure. This also paved the way for automated deployments of application code.
 
     + Remote Management
     Together with a bare metal focused development team we designed and implemented a remote management platform for our dedicated servers. Using FreeBSD for VPN access and concentrator servers. Using the internal PF subsystem to grant and deny access on a per client basis.
@@ -159,8 +159,10 @@ Marcus van Dam ![mugshot][]
 ## Public References ##
 
 ### Blog Posts ###
-+ [A Brief Overview of the History of Linux Containers](http://www.techsummit.io/2017/09/04/history-of-linux-containers.html)
-+ [Cloud Computing's History and Impact](http://www.techsummit.io/2017/08/14/cloud-computing-history.html)
++ A Brief Overview of the History of Linux Containers
++ Cloud Computing's History and Impact
+
+(unfortunately the 'techsummit.io' website has removed the older blogposts and links are now dead)
 
 ### Talks ###
 + [Chef at Leaseweb: past, present and future](https://www.youtube.com/watch?v=Uwv9gLdjvo8)
