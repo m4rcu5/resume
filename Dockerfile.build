@@ -1,7 +1,7 @@
-FROM debian:11 as builder
+FROM debian:bookworm AS builder
 
 # prepare the build environment
-RUN apt update && apt install -y build-essential cmake git-core
+RUN apt-get update && apt-get install -y build-essential cmake git-core
 
 # fetch & compile MultiMarkdown
 WORKDIR /usr/src
@@ -12,17 +12,16 @@ RUN cd MultiMarkdown-6 && make && \
     cd build && make
 
 
-FROM debian:11 as runtime
-
-ENV WK_VERSION 0.12.6.1-2
+FROM debian:bookworm AS runtime
 
 # install runtime dependencies
-RUN apt update && apt install -y wget make fontconfig libx11-6 libxext6 libxrender1 xfonts-base xfonts-75dpi libjpeg62-turbo
+RUN apt-get update && apt-get install -y make
 
 # install wkhtmltopdf
-RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/${WK_VERSION}/wkhtmltox_${WK_VERSION}.bullseye_amd64.deb && \
-    dpkg -i wkhtmltox_${WK_VERSION}.bullseye_amd64.deb
+RUN apt-get install -y wkhtmltopdf
+
+# install html-proofer
+RUN apt-get install -y ruby-html-proofer
 
 # copy the MultiMarkdown binary
 COPY --from=builder /usr/src/MultiMarkdown-6/build/multimarkdown /usr/bin/
-
